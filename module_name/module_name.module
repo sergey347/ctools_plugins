@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * SBS Discovery Helper main file.
+ */
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function sbs_discovery_helper_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools' && $plugin_type == 'content_types') {
+    return 'plugins/content_types';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function sbs_discovery_helper_theme($existing, $type, $theme, $path) {
+  return array(
+    'advertising_regional' => array(
+      'path' => "$path/templates",
+      'template' => 'advertising-regional',
+      'variables' => array(
+        'advertising_regional_title' => '',
+        'advertising_regional_image' => '',
+        'advertising_regional_body' => '',
+        'advertising_regional_button' => '',
+      ),
+    ),
+  );
+}

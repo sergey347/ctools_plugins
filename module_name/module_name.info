@@ -1,0 +1,6 @@
+name = Module name
+description = "Some description."
+
+project = module_name
+package = PackageName
+core = 7.x

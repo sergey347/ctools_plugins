@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Container for schema, install, updates, uninstall hooks.
+ */
+
+/**
+ * Last 2 digits in hook_update_N are for sequential counting, starting with 00.
+ */
+function module_name_update_7000() {
+  variable_set('variable_name', 'variable_value');
+
+  features_revert_module('feature_name');
+
+  module_enable(array('some_module_name'));
+
+  // Revert of several features.
+  // This array syntax works fine starting from PHP 5.4.
+  array_map('features_revert_module', [
+    'feature_name_1',
+    'feature_name_2',
+  ]);
+}
