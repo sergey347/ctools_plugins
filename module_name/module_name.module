@@ -2,13 +2,13 @@
 
 /**
  * @file
- * SBS Discovery Helper main file.
+ * Module Name Helper main file.
  */
 
 /**
  * Implements hook_ctools_plugin_directory().
  */
-function sbs_discovery_helper_ctools_plugin_directory($owner, $plugin_type) {
+function module_name_helper_ctools_plugin_directory($owner, $plugin_type) {
   if ($owner == 'ctools' && $plugin_type == 'content_types') {
     return 'plugins/content_types';
   }
@@ -17,16 +17,16 @@ function sbs_discovery_helper_ctools_plugin_directory($owner, $plugin_type) {
 /**
  * Implements hook_theme().
  */
-function sbs_discovery_helper_theme($existing, $type, $theme, $path) {
+function module_name_helper_theme($existing, $type, $theme, $path) {
   return array(
-    'advertising_regional' => array(
+    'file_upload' => array(
       'path' => "$path/templates",
-      'template' => 'advertising-regional',
+      'template' => 'file-upload',
       'variables' => array(
-        'advertising_regional_title' => '',
-        'advertising_regional_image' => '',
-        'advertising_regional_body' => '',
-        'advertising_regional_button' => '',
+        'file_upload_title' => '',
+        'file_upload_image' => '',
+        'file_upload_body' => '',
+        'file_upload_button' => '',
       ),
     ),
   );
