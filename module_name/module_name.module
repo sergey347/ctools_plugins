@@ -29,5 +29,27 @@ function module_name_helper_theme($existing, $type, $theme, $path) {
         'file_upload_button' => '',
       ),
     ),
+    'back_button' => array(
+      'path' => "$path/templates",
+      'template' => 'back-button',
+    ),
+    'create_button' => array(
+      'path' => "$path/templates",
+      'template' => 'create-button',
+      'variables' => array(
+        'button_title' => '',
+        'button_type' => '',
+        'anchor_attributes' => '',
+        'span_attributes' => '',
+      ),
+    ),
+    'site_logo' => array(
+      'path' => "$path/templates",
+      'template' => 'site-logo',
+      'variables' => array(
+        'to_frontpage' => '/',
+        'logo_src' => '',
+      ),
+    ),
   );
 }
